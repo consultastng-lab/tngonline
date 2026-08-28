@@ -1,0 +1,373 @@
+<!DOCTYPE html><html class="light" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Catálogo - TNG Group SAS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#004491",
+                        "inverse-primary": "#acc7ff",
+                        "primary": "#003f87",
+                        "primary-fixed": "#d7e2ff",
+                        "on-background": "#191c1e",
+                        "surface-bright": "#f7f9fb",
+                        "outline": "#727784",
+                        "surface-tint": "#115cb9",
+                        "surface": "#f7f9fb",
+                        "on-primary-container": "#bbd0ff",
+                        "tertiary-fixed-dim": "#3cd7ff",
+                        "tertiary-fixed": "#b4ebff",
+                        "on-tertiary-fixed": "#001f27",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-dim": "#d8dadc",
+                        "tertiary-container": "#006176",
+                        "on-tertiary-container": "#70ddff",
+                        "on-secondary-container": "#626263",
+                        "secondary": "#5e5e5e",
+                        "surface-container-high": "#e6e8ea",
+                        "on-primary-fixed": "#001a40",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "tertiary": "#004858",
+                        "background": "#f7f9fb",
+                        "primary-fixed-dim": "#acc7ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#e1dfdf",
+                        "secondary-fixed-dim": "#c7c6c6",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-highest": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "outline-variant": "#c2c6d4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#424752",
+                        "primary-container": "#0056b3",
+                        "secondary-fixed": "#e4e2e2",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#464747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "title-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .tng-gradient-btn {
+            background: linear-gradient(135deg, #0056b3 0%, #003f87 100%);
+            box-shadow: 0px 4px 20px rgba(0, 86, 179, 0.2);
+            transition: all 0.3s ease;
+        }
+        .tng-gradient-btn:hover {
+            box-shadow: 0px 6px 24px rgba(0, 86, 179, 0.3);
+            transform: translateY(-1px);
+        }
+        
+        .tng-metallic-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 86, 179, 0.08);
+        }
+        
+        .velocity-underline {
+            position: relative;
+        }
+        .velocity-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #3cd7ff 0%, #0056b3 100%);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        .active.velocity-underline::after,
+        .velocity-underline:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest sticky top-0 z-50 border-b border-outline-variant shadow-sm w-full">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+<!-- Brand -->
+<a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity"><span class="font-display-lg text-[40px] md:text-[48px] font-bold tracking-tighter text-primary leading-none">TNG</span><span class="font-label-md text-[16px] text-secondary hidden md:block uppercase tracking-widest mt-3">Group SAS</span></a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-primary font-bold velocity-underline active" href="catalogo.html">Catálogo</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 velocity-underline" href="#">Servicios</a>
+<a class="font-label-md text-on-surface-variant hover:text-primary transition-colors duration-200 velocity-underline" href="#">Empresa</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-stack-md">
+<button aria-label="Search" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</button>
+<button aria-label="Cart" class="text-on-surface-variant hover:text-primary transition-colors relative">
+<span class="material-symbols-outlined text-[24px]">shopping_cart</span>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">3</span>
+</button>
+<a href="login.html" aria-label="Profile" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[24px]">person</span>
+</a>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Menu" class="md:hidden text-on-surface-variant">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Filters (Desktop) / Hidden on Mobile -->
+<aside class="hidden md:block w-64 flex-shrink-0">
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant tng-metallic-shadow sticky top-28">
+<h2 class="font-title-md text-primary mb-6">Filtros</h2>
+<!-- Categorías -->
+<div class="mb-6">
+<h3 class="font-label-md text-on-surface-variant uppercase tracking-wider mb-3">Categoría</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-white group-hover:border-primary transition-colors">
+<input checked="" class="opacity-0 absolute w-full h-full cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-white peer-checked:text-primary opacity-0 peer-checked:opacity-100 absolute pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Todos</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-white group-hover:border-primary transition-colors">
+<input class="opacity-0 absolute w-full h-full cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-white peer-checked:text-primary opacity-0 peer-checked:opacity-100 absolute pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Baterías</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-white group-hover:border-primary transition-colors">
+<input class="opacity-0 absolute w-full h-full cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-white peer-checked:text-primary opacity-0 peer-checked:opacity-100 absolute pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Motores</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-white group-hover:border-primary transition-colors">
+<input class="opacity-0 absolute w-full h-full cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-white peer-checked:text-primary opacity-0 peer-checked:opacity-100 absolute pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">Sensores</span>
+</label>
+</div>
+</div>
+<!-- Disponibilidad -->
+<div class="mb-6">
+<h3 class="font-label-md text-on-surface-variant uppercase tracking-wider mb-3">Disponibilidad</h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-white group-hover:border-primary transition-colors">
+<input class="opacity-0 absolute w-full h-full cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-white peer-checked:text-primary opacity-0 peer-checked:opacity-100 absolute pointer-events-none transition-opacity">check</span>
+</div>
+<span class="font-body-md text-on-surface group-hover:text-primary transition-colors">En Stock</span>
+</label>
+</div>
+</div>
+<button class="w-full py-2 px-4 border border-outline-variant text-on-surface-variant font-label-md rounded hover:bg-surface-variant transition-colors">
+                    Limpiar Filtros
+                </button>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="flex-grow flex flex-col">
+<!-- Toolbar -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-stack-lg gap-4">
+<div>
+<h1 class="font-headline-lg text-primary mb-1">Catálogo de Productos</h1>
+<p class="font-body-md text-on-surface-variant">Mostrando 1-8 de 124 resultados</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<button class="md:hidden flex items-center gap-2 py-2 px-4 border border-outline-variant rounded bg-white text-on-surface">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="font-label-md">Filtros</span>
+</button>
+<div class="relative flex-grow sm:flex-grow-0">
+<select class="appearance-none w-full sm:w-48 bg-white border border-outline-variant rounded py-2 pl-4 pr-10 font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+<option>Relevancia</option>
+<option>Menor Precio</option>
+<option>Mayor Precio</option>
+<option>Más Nuevos</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-on-surface-variant">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-stack-lg">
+<!-- Product Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group tng-metallic-shadow flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="relative aspect-square bg-surface-container-low p-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A high-resolution, industrial-style product photograph of a modern, heavy-duty automotive battery. The battery is set against a clean, bright studio white background, emphasizing its technical build. Subtle metallic highlights and crisp shadows give it a premium, reliable appearance consistent with the TNG Group modern corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2pmEi7wKihMPCtJnrMOzKb1n9kQ60pawneAc0Wv06VmGiWHZLZylQ_xIk68rb7RwVVcEoDc72CWgDHAsdQL5lw9Gs8h_UnQmW5CD9CZNxnToR1MQA6KmWuHK7OVDUZPtXK921GKriVjNU9eH_WUns8iOucYWOpcmFtn-rcNNhA5oogW5oS-kUq5CuLLG7QYnGtSF8b8O2RQrsXMMDQwJyXnFRKzArk-8c7iNZ6SRP_z_cg5vKAqVwpA">
+<span class="absolute top-3 left-3 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm uppercase px-2 py-1 rounded">En Stock</span>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-secondary uppercase tracking-wider mb-1">Baterías</span>
+<h3 class="font-title-md text-on-surface mb-2 line-clamp-2">Batería de Alto Rendimiento 12V 75Ah</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Ideal para vehículos con alta demanda energética. Tecnología AGM de precisión.</p>
+<div class="mt-auto flex items-end justify-between">
+<span class="font-headline-lg-mobile text-primary font-bold">$185.00</span>
+<button aria-label="Añadir al carrito" class="w-10 h-10 rounded-full tng-gradient-btn flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group tng-metallic-shadow flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="relative aspect-square bg-surface-container-low p-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed, professional product shot of an industrial electric motor component. The motor features precise metallic finishes, cooling fins, and copper windings visible through an opening. Set on a pristine white background with soft, technical lighting that highlights the engineering quality, fitting the TNG velocity and precision style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOlm-nSZX8_6WVFKasAlPDI0L1w8u8UWj0T-Q3KfTdLF_L3zBXj11GF-yrdvLKAq8SpPAxUDI-mQrIvTHVKDZnfZxkO49Z7q6gp8lIeEl4EQGdjoLbmslukryr8W2GHSBwQ-1tngnAqIArxSTS-E3a-9ha7sic01gPFxEYUumyJXYAWSCQn6-M0D8mFZSGKwIq8QEdFvsnZ33awGiB6gc-cQPxmqMf1xdhoosH2WU1JJOKxZf6-jaI2w">
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-secondary uppercase tracking-wider mb-1">Motores</span>
+<h3 class="font-title-md text-on-surface mb-2 line-clamp-2">Motor Eléctrico Trifásico 5HP</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Eficiencia IE3, carcasa de aluminio inyectado para máxima disipación térmica.</p>
+<div class="mt-auto flex items-end justify-between">
+<span class="font-headline-lg-mobile text-primary font-bold">$420.00</span>
+<button aria-label="Añadir al carrito" class="w-10 h-10 rounded-full tng-gradient-btn flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group tng-metallic-shadow flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="relative aspect-square bg-surface-container-low p-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A macro product photograph of a sophisticated industrial sensor. The sensor has a stainless steel cylindrical body with a blue LED indicator ring. The lighting is crisp and technical, emphasizing the precision manufacturing of the component against a flawless white background, perfectly aligning with the TNG brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmuJ7w6IygxCfHTdIJLCZnDhIAi_F7Ca-vM-c-goeIzSRkQ1sdVs0UXVKcoek7oLgVBy-ctEy6bW26YMLnrjvqvU4C11X3ZwgP5YwwrZZ8d7Yp6GEcZCNT9co0bcGcZlJ3wKlUYfjTBKBUPPQYaTTYSFIZv4pq5F4Dyc-zOhcAKOS69EjX3rzb2I1CtS-vgMJImamjCLKOTWjk-wyhpOI21dFcsfLFL4gaAjuB6nCBtpiy368wqQg5FA">
+<span class="absolute top-3 left-3 bg-tertiary-fixed text-on-tertiary-fixed font-label-sm uppercase px-2 py-1 rounded">En Stock</span>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-secondary uppercase tracking-wider mb-1">Sensores</span>
+<h3 class="font-title-md text-on-surface mb-2 line-clamp-2">Sensor de Presión Industrial 0-100 Bar</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Salida 4-20mA, cuerpo de acero inoxidable. Alta precisión para entornos exigentes.</p>
+<div class="mt-auto flex items-end justify-between">
+<span class="font-headline-lg-mobile text-primary font-bold">$115.50</span>
+<button aria-label="Añadir al carrito" class="w-10 h-10 rounded-full tng-gradient-btn flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden group tng-metallic-shadow flex flex-col h-full hover:-translate-y-1 transition-transform duration-300 cursor-pointer" onclick="window.location.href='producto.html'">
+<div class="relative aspect-square bg-surface-container-low p-4 flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-500" data-alt="A clean, isolated product shot of a specialized automotive starter motor. The metallic surfaces are bright and accurately rendered, showing the heavy-duty construction. The studio lighting provides a premium, technical feel on a white backdrop, suitable for a high-end B2B e-commerce catalog." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYktqEt9RJm9bGN0kyNorQT-eBI_R8oGDp4wI4GyP57C4luYliX49z-tzWxl427AySrAZkIS_2aLXqzBBRlYAtu8HcjfaMoFSKmLGXO_pa5ExIuDexJBXuHNIjGhWE5BhXiN414_Vk83BFaP7y2aJydTEfLdUC0Zh9CIEgRRUbBZpaC5IK8y0Z35Bz47-kkY1KHjmnhwjt7o453nMVwaL6gLw3-ZQA7OAdzSRWbPzpKypfBoORxI_Tvg">
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<span class="font-label-sm text-secondary uppercase tracking-wider mb-1">Motores</span>
+<h3 class="font-title-md text-on-surface mb-2 line-clamp-2">Motor de Arranque Serie T-Pro</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Compatible con vehículos comerciales pesados. Alta durabilidad garantizada.</p>
+<div class="mt-auto flex items-end justify-between">
+<span class="font-headline-lg-mobile text-primary font-bold">$280.00</span>
+<button aria-label="Añadir al carrito" class="w-10 h-10 rounded-full tng-gradient-btn flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center items-center gap-2 mt-auto">
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors disabled:opacity-50" disabled="" onclick="window.location.href='catalogo.html'">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded bg-primary text-white font-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md" onclick="window.location.href='catalogo.html'">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md" onclick="window.location.href='catalogo.html'">3</button>
+<span class="text-on-surface-variant">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors font-label-md" onclick="window.location.href='catalogo.html'">16</button>
+<button class="w-10 h-10 flex items-center justify-center rounded border border-outline-variant text-on-surface-variant hover:bg-surface-variant transition-colors" onclick="window.location.href='catalogo.html'">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full py-stack-lg border-t border-outline-variant mt-auto">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-lg font-headline-lg text-surface-container-lowest dark:text-primary mb-4">TNG</div>
+<p class="font-body-md text-body-md text-surface-variant mb-6 text-sm opacity-80">Precision en Movimiento.</p>
+<p class="font-body-md text-body-md text-surface-variant text-xs">© 2024 TNG Group SAS. Todos los derechos reservados.</p>
+</div>
+<div class="flex flex-col gap-2">
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white transition-colors" href="#">Privacidad</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white transition-colors" href="#">Términos</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white transition-colors" href="#">Contacto</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-white transition-colors" href="#">Preguntas Frecuentes</a>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>
